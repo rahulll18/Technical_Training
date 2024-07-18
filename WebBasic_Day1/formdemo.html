@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="Success.html" id="form">
+        <h3>Student Details</h3>
+        <div>
+            <label for="fname">First Name :</label>
+            <input type="text" id="fname" placeholder="your First name" required>
+        </div>
+        <br>
+        <div>
+            <label for="lname"> Last Name :</label>
+            <input type="text" id="lname" placeholder="your Last name" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password :</label>
+            <input type="password" id="password" placeholder="password" required maxlength="6" minlength="1">
+        </div>
+        <br>
+        <div>
+            <label for="age">Age :</label>
+            <input type="number" id="age" placeholder="Enter age" min="18">
+        </div>
+        <br>
+        <label for="select">Select the cousrses : </label>
+        <input type="checkbox" name="cousrse" id="course1" value="web basics"> <label for="course1">Web basics</label>
+        <input type="checkbox" name="cousrse" id="course2" value="git"> <label for="course2">GIT</label>
+        <input type="checkbox" name="cousrse" id="course3" value="node"> <label for="course3">Node</label>
+        <input type="checkbox" name="cousrse" id="course4" value="angular"> <label for="course4">Angular</label>
+        <br>
+        <label for="gender">Gender :</label>
+        <input type="checkbox" name="male" id="male"> <label for="male">Male</label>
+        <input type="checkbox" name="male" id="female"> <label for="female">Female</label>
+        <br>
+        <br>
+        <label for="departments">Select department :</label>
+        <select name="department" id="departments">
+            <option value="IT">Information technology</option>
+            <option value="cs">Computer science</option>
+            <option value="EXTC">EXTC</option>
+            <option value="Elec">Electrical</option>
+        </select>
+        <br>
+        <br>
+        <label for="comments">Add an extra comments : </label>
+        <textarea name="" id="comments" cols="30" rows="10"></textarea>
+        <br>
+        <input type="datetime-local">
+        <input type="color">
+        <input type="hidden">
+        <input type="range">
+        <input type="week">
+        <br>
+        <br>
+       <input type="image" src="./download.jpeg" alt="img" height="50" width="50">
+       <input type="reset">
+       
+    </form>
+    <script>
+        const element = document.getElementById('form');
+        console.log(element)
+    </script>
+</body>
+</html>

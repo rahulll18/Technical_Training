@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+</head>
+<body>
+    <details>
+        <summary>Term1</summary>
+        <p>Details regarding term</p>
+        <p>Details regarding term</p>
+        <p>Details regarding term</p>
+        <p>Details regarding term</p>
+    </details>
+
+    <details>
+        <summary>Term2</summary>
+        <div>Details regarding term
+            <details>
+                <summary>Web basics</summary>
+                <p>html</p>
+                <p>css</p>
+                <p>js</p>
+                <p>jquery</p>
+            </details>
+        </div>
+        <p>Details regarding term</p>
+        <p>Details regarding term</p>
+        <p>Details regarding term</p>
+    </details>
+
+    <input list="decodelist" id="code" placeholder="Select department">
+    <datalist id="decodelist">
+        <option value="js">JS</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="git">GIT</option>
+    </datalist>
+    <button onclick="clearOption()">Clear</button>
+    <script>
+        function clearOption(){
+            document.getElementById("code").value = "";
+        }
+    </script>
+</body>
+</html>
