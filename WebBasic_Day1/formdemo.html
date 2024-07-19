@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        [type = "text"]{
+            padding: 3px;
+            width: 200px;
+            background-color: aqua;
+        }
+        [type = "checkbox"]{
+            height: 20px;
+            width: 20px;
+        }
+        .box{
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
     <form action="Success.html" id="form">
         <h3>Student Details</h3>
         <div>
             <label for="fname">First Name :</label>
-            <input type="text" id="fname" placeholder="your First name" required>
+            <input type="text" id="fname" class="box" placeholder="your First name" required>
         </div>
         <br>
         <div>
             <label for="lname"> Last Name :</label>
-            <input type="text" id="lname" placeholder="your Last name" required>
+            <input type="text" id="lname" class="box" placeholder="your Last name" required>
         </div>
         <br>
         <div>

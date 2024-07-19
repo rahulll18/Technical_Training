@@ -6,8 +6,17 @@
     <title>Table</title>
     <style>
         table, th, td {
-        border: 1px solid black;
+        border: 1px solid green;
         border-collapse: collapse;
+    }
+    thead tr :first-child{
+        background-color: darkorange;
+    }
+    tbody tr:nth-child(3){
+        background-color: aqua;
+    }
+    tfoot tr :last-child{
+        background-color: green;
     }
     </style>
 </head>
@@ -38,8 +47,7 @@
             <tr>
                 <td>003</td>
                 <td>Mayur Argade</td>
-                <td>58</td>
-                
+                <td>58</td>  
             </tr>
         </tbody>
         <tfoot>

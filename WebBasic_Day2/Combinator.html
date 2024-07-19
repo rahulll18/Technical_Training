@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+</head>
+<style>
+    section div{
+        /* direct and indirect child */
+        background-color: aqua;
+    }
+    section>div{
+        background-color: yellow;
+    }
+    /* sibling */
+    #section1+div{
+        font-size: 30px;
+    }
+    #section1+*{
+        font-size: 30px;
+    }
+    #section1~div{
+        font-size: 50px;
+    }
+</style>
+<body>
+    <section>
+        <div>
+            <h3>height 1</h3>
+            <p>para 1</p>
+        </div>
+        <div>
+            <h3>height 2</h3>
+            <p>para 2</p>
+        </div>
+        <section id="section1">
+            <div>
+                <h3>height 3</h3>
+            </div>
+        </section>
+        <aside>
+                next
+        </aside>
+        <div>
+            <h3>height 4</h3>
+            <p>para 4</p>
+        </div>
+        <div>
+            <h3>height 5</h3>
+        </div>
+    </section>
+    <section>
+        <div>
+            <strong></strong>
+        </div>
+    </section>
+</body>
+</html>

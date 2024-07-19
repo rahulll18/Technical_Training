@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<style>
+    nav{
+        background-color: rgb(230, 171, 171);
+        padding: 5px;
+        border: 2px solid black;
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 15px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    ul li a:visited{
+        color: red;
+    }
+    ul li a:hover{
+        background-color: grey;
+    }
+    /* pseudo element */
+    h2::first-letter{
+        color: rgb(122, 104, 139);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 50px;
+    }
+    p::first-line{
+        color: rgb(206, 13, 212);
+        font-weight: bolder;
+        font-size: 20px;
+    }div{
+        color: white;
+    }
+    body{
+        background-image: url(./media/background.jpeg);
+        background-repeat: repeat;
+        /* background-size: 100% */
+    }
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://www.sfit.ac.in/" target="_blank">College Website</a></li>
+            <li><a href="./Combinator.html">Combinator</a></li>
+            <li><a href="./HTML5.html">HTML5</a></li>
+            <li><a href="../WebBasic_Day1/Revision.html">Revision</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h2>This is  an example</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas voluptate nam dicta eaque tenetur veniam totam facilis, consequuntur rem aperiam, veritatis quibusdam. Officia molestiae natus suscipit, beatae aliquam laborum a?</p>
+    </div>
+</body>
+</html>
