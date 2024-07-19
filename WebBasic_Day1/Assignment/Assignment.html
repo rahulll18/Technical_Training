@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .header {
+            text-align: center;
+        }
+       
+    </style>
 </head>
 <body>
     <dl>
@@ -16,5 +30,71 @@
         <dt>JavaScript</dt>
         <dd>A scripting language used to create dynamic and interactive web pages.</dd>
       </dl>
+
+      <!-- Table -->
+      <h2>Employee Details</h2>
+
+      <table>
+        <thead>
+
+       
+          <tr>
+              <th rowspan="2">ID</th>
+              <th colspan="2">NAME</th>
+              <th rowspan="2">DEPARTMENT</th>
+          </tr>
+          <tr>
+              <th>FIRST NAME</th>
+              <th>LAST NAME</th>
+          </tr>
+        </thead>
+        <tbody>
+
+       
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">footer</td>
+            </tr>
+        </tfoot>
+      </table>
+
+        <h2>Content Section</h2>
+        <p>This is a paragraph with a <q>short quote</q> and a <blockquote>long quote that spans multiple lines.</blockquote></p>
+        <p>You can use the 
+            <pre>preformatted text</pre> 
+             tag for displaying code or preserving whitespace.</p>
+        <p>Here is a date in a <time datetime="2024-07-19">time tag</time>.</p>
+    
+
+      <select>
+        <optgroup label="Citrus Fruits">
+          <option value="orange">Orange</option>
+          <option value="lemon">Lemon</option>
+          <option value="lime">Lime</option>
+        </optgroup>
+        <optgroup label="Berry Fruits">
+          <option value="strawberry">Strawberry</option>
+          <option value="blueberry">Blueberry</option>
+          <option value="raspberry">Raspberry</option>
+        </optgroup>
+        <optgroup label="Tropical Fruits">
+          <option value="banana">Banana</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="mango">Mango</option>
+        </optgroup>
+      </select>
 </body>
 </html>
