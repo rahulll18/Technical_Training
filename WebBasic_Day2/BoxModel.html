@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        section{
+            background-color: #00ffff;
+            width: 70%;
+            height: 300px;
+            margin: 5px 0px 10px 20px;
+        }
+        section>div{
+            background-color: chartreuse;border-width: 1px 2px 3px 4px;
+            border-style: solid dotted double solid;
+            border-color: red blue purple peru;
+            width: 70%;border-radius: 40px;
+            margin: 21px;
+            padding: 40px;
+        }
+        #inline{
+            background-color: blue;
+            display: block;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Box Model</h3>
+        <div id="box1">
+            <b id="inline">INLINE ELEMENT</b>
+            <h1>Hello !! Day 2 of technical training.</h1>
+            <h2>Hello !! Day 2 of technical training.</h2>
+            <h3>Hello !! Day 2 of technical training.</h3>
+            <h4>Hello !! Day 2 of technical training.</h4>
+            <h5>Hello !! Day 2 of technical training.</h5>
+            <h6>Hello !! Day 2 of technical training.</h6>
+        </div>
+    </section>
+</body>
+</html>
