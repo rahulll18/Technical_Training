@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <div>
+        <h3>Audio</h3>
+        <audio src="./media/Audio.mp3" controls loop>Listen</audio>
+
+        <audio controls loop>
+            <source src="./media/Audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div>
+        <h3>Video</h3>
+        <video controls width="350" height="400"  autoplay loop>
+            <source src="./media/neonarrow.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div>
+        <h2>Youtube video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mB8Pxm3Gouk?si=vPuK17PU0c-wTmM3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="./media/sample.pdf" frameborder="0"width="500" height="400"></iframe>
+    </div>
+    <div>
+        <input type="text" id="text"> <button type="button" onclick="result.value = text.value.toUpperCase()">Convert</button>
+        <p>Upper Case Value is:- <output id="result"></output></p>
+        <input type="text" id="textL"> <button type="button" onclick="convertL()">Convert</button>
+        <p>Lower Case Value is:- <output id="resultL"></output></p>
+    </div>
+
+    <script>
+        function convertL(){
+            const lowereElement = document.getElementById("textL").value.toLowerCase()
+            document.getElementById("resultL").textContent= lowereElement
+        }
+    </script>
+</body>
+</html>
