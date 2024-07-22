@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-classes and Pseudo-elements Example</title>
+<style>
+  /* Pseudo-classes */
+  div:focus-within {
+    background-color: yellow;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: lightgreen;
+  }
+
+  p:empty {
+    display: none;
+  }
+
+  p:not(.special) {
+    color: gray;
+  }
+
+  /* Pseudo-elements */
+  p::before {
+    content: "Before text ";
+    font-weight: bold;
+  }
+
+  p::after {
+    content: " After text";
+    font-style: italic;
+  }
+
+  p::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+  }
+
+  p::first-line {
+    font-size: 120%;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div tabindex="0">
+  <p>This paragraph is inside a div. When the div receives focus, its background turns yellow.</p>
+</div>
+
+<input type="checkbox" id="checkbox">
+<label for="checkbox">Checkbox</label>
+
+<p></p>
+
+<p>This paragraph has some <span class="highlight">special</span> content. Only paragraphs without the class "special" will have gray color.</p>
+
+<p>This is a paragraph.</p>
+
+<p>This is another paragraph.</p>
+
+<p>This is a paragraph with a long content. Pseudo-elements will be applied.</p>
+
+</body>
+</html>
