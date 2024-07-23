@@ -14,13 +14,13 @@
         #parent2{
             border: 2px solid red;
             padding: 15px;
-            position: relative;
+            position: static;
         }
         #parent3{
             border: 2px solid rgb(23, 110, 168);
             padding: 15px;
             /* Non static */
-            position: relative;
+            position: static;
         }
         #child{
             border: 2px solid rgb(204, 35, 176);
@@ -29,6 +29,20 @@
             top: 5px;
             left: 70px;
         }
+
+        .child {
+        margin: 8%;
+        width: 100px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 2px solid #333;
+        transition: transform 0.3s ease-out 0.3s;
+    }
+
+    .child:hover {
+        transform: scale(1.1);
+        border-color: #ff6347;
+    }
     </style>
 </head>
 <body>
@@ -43,6 +57,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
     </div>
 </body>
 </html>
