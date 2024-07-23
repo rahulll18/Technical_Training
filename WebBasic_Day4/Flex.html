@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexDemo</title>
+    <style>
+        #flexContainer{
+            display: flex;
+            /* shorthand property */
+            flex-flow: row wrap;
+            /* justify-content: space-evenly;
+            align-items: center; */
+            /* flex-direction: column; */
+            border: 2px dashed darkgoldenrod;
+            padding: 5px;
+            height: 100vh;
+        }
+        .container>*{
+            border: 2px solid red;
+            width: 300px;
+            height: 250px;
+            padding: 2px;
+            margin: 2px;
+        }
+        #flexContainer>*:first-child{
+            align-items: flex-start;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="flexContainer" class="container">
+        <article>
+            1
+            <img src="../WebBasic_Day1/download.jpeg" alt="Renguku" width="100">
+            <figcaption>Renguku flame breathing !!</figcaption>
+        </article>
+        <div>
+            2
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+        <article>
+            3
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facilis aut, dolore sit nesciunt impedit. Numquam vero suscipit harum deleniti illo sed? Accusantium magni incidunt qui? Aperiam consequatur nesciunt omnis.
+        </article>
+        <div>
+            4
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+        <div>
+            5
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+        <div>
+            6
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+        <div>
+            7
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+        <div>
+            8
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, voluptatem saepe. Non esse, pariatur voluptatem soluta perferendis harum, hic quam modi magni necessitatibus ea vitae nulla quo illo, dicta tempora.
+        </div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Assignment</title>
+    <style>
+        #parent1{
+            border: 2px solid black;
+            padding: 15px;
+            width: 450px;
+            margin: 100px auto;
+        }
+        #parent2{
+            border: 2px solid red;
+            padding: 15px;
+            position: relative;
+        }
+        #parent3{
+            border: 2px solid rgb(23, 110, 168);
+            padding: 15px;
+            /* Non static */
+            position: relative;
+        }
+        #child{
+            border: 2px solid rgb(204, 35, 176);
+            padding: 15px;
+            position: absolute;
+            top: 5px;
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent1">
+        Parent 1
+        <div id="parent2">
+            Parent 2
+            <div id="parent3">
+                Parent 3
+                <div id="child">
+                    Child
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
