@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transistion</title>
+</head>
+<style>
+.block{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    transition-duration: 2s
+}
+#box1:hover{
+    transform: translateY(200px);
+   
+}
+#box2:hover{
+transform: rotateX(90deg);
+}
+#box3:hover{
+transform: rotateY(45deg);
+}
+#box4:hover{
+transform: scaleX(1/2)
+}
+#box5:hover{
+transform: scaleY(2);
+}#box6:hover{
+transform: scaleZ(2);
+}
+#box7:hover{
+    transform: skewX(35deg);
+}
+</style>
+<body>
+    <div class="block" id="box1">
+        1
+    </div>
+    <div class="block" id="box2">
+        2
+    </div>
+    <div class="block" id="box3">
+        3
+    </div>
+    <div class="block" id="box4">
+        4
+    </div>
+    <div class="block" id="box5">
+        5
+    </div>
+    <div class="block" id="box6">
+        6   
+    </div>
+    <div class="block" id="box7">
+        7  
+    </div>
+</body>
+</html>

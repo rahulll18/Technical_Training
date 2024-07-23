@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Positions</title>
+    
+    <!-- for making children absolute its parent position must be non static  -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            border: 2px double black;
+        }
+        #div1{
+            border: 2px solid red;
+            padding: 2px;
+            position: relative;
+            top: 50px;
+        }
+        #div2{
+            border: 2px solid darkgreen;
+            padding: 2px;
+            position: absolute;
+            top: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="div1">
+        <b>India is my country</b>
+        <b>All Indians are my brothers and sisters</b>
+    </div>
+    <div id="div2">
+        <i>India is my country</i>
+        <i>All Indians are my brothers and sisters</i>
+    </div>
 </body>
 </html>

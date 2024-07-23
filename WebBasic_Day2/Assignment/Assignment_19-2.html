@@ -6,62 +6,82 @@
 <title>Pseudo-classes and Pseudo-elements Example</title>
 <style>
   /* Pseudo-classes */
-  div:focus-within {
-    background-color: yellow;
-  }
-
-  input[type="checkbox"]:checked {
-    background-color: lightgreen;
-  }
-
-  p:empty {
-    display: none;
-  }
-
-  p:not(.special) {
-    color: gray;
-  }
+  nav{
+        background-color: rgb(230, 171, 171);
+        padding: 5px;
+        border: 2px solid black;
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 15px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+        padding: 3px;
+    }
+    ul li a:link{
+        color: green;
+    }
+    ul li a:visited{
+        color: red;
+    }
+    ul li a:hover{
+        background-color: grey;
+        border-radius: 15px;
+    }
 
   /* Pseudo-elements */
-  p::before {
+  #p1::before {
     content: "Before text ";
     font-weight: bold;
   }
 
-  p::after {
+  #p2::after {
     content: " After text";
     font-style: italic;
   }
 
-  p::first-letter {
+  #p3::first-letter {
     font-size: 150%;
     font-weight: bold;
   }
 
-  p::first-line {
+  #p4::first-line {
     font-size: 120%;
-    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
   }
+  input[type=text]:enabled {
+  background: yellow;
+}
+
+input[type=text]:disabled {
+  background: yellowgreen;
+}
 </style>
 </head>
 <body>
+  <nav>
+    <ul>
+        <li><a href="https://www.spit.ac.in/" target="_blank">College Website</a></li>
+        <li><a href="../BoxModel.html">BoxModel</a></li>
+        <li><a href="https://www.amazon.com/">Amazon</a></li>
+        <li><a href="../media/background.jpeg">Background image</a></li>
+    </ul>
+</nav>
+<h2>Pseudo-elements</h2>
+<form action="">
+  First name: <input type="text" value="Mickey"><br>
+  Last name: <input type="text" value="Mouse"><br>
+  Country: <input type="text" disabled="disabled" value="Disneyland">
+</form>
+<p id="p1">Hello!! This is Day 3 of technical Training</p>
 
-<div tabindex="0">
-  <p>This paragraph is inside a div. When the div receives focus, its background turns yellow.</p>
-</div>
+<p id="p2">This is a paragraph.</p>
 
-<input type="checkbox" id="checkbox">
-<label for="checkbox">Checkbox</label>
+<p id="p3">This is another paragraph.</p>
 
-<p></p>
-
-<p>This paragraph has some <span class="highlight">special</span> content. Only paragraphs without the class "special" will have gray color.</p>
-
-<p>This is a paragraph.</p>
-
-<p>This is another paragraph.</p>
-
-<p>This is a paragraph with a long content. Pseudo-elements will be applied.</p>
+<p id="p4">This is a paragraph with a long content</p>
 
 </body>
 </html>
