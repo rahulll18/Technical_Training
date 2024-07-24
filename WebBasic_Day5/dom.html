@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ol>
+        <li id="backend">JAVA</li>
+        <li id="backend2"><b>PYTHON</b></li>
+        <li>C#</li>
+        <li>REACT</li>
+        <li class="frontend">C++</li>
+        <li class="frontend">JAVASCRIPT</li>
+    </ol>
+
+    <p id="para"></p>
+    <script>
+        const nodes = document.getElementsByTagName('li')
+        console.log(nodes)
+
+        const nodes1 = document.getElementsByClassName('frontend')
+        console.log(nodes1)
+
+        const nodes2 = document.getElementById('backend')
+        console.log(nodes2)
+
+        const listnodes = document.getElementById('backend2')
+        console.log(listnodes.textContent)
+        console.log(listnodes.innerText)
+        console.log(listnodes.innerHTML)
+
+        const para = document.getElementById('para')
+        para.innerHTML = "<i>" +listnodes.innerText+ "</i>"
+
+
+        const text = document.createTextNode("This is my India");
+        const bnode = document.createElement('b');
+        bnode.append(text);
+        document.body.append(bnode)
+    </script>
+</body>
+</html>

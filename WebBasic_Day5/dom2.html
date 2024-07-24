@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+</head>
+<body>
+    <img id="renguku" src="../WebBasic_Day1/download.jpeg" alt="Renguku" height="200" width="200">
+
+    <button onclick="change()" id="changeButton">Change image</button>
+</body>
+<script>
+     const imageNode=document.getElementById("renguku"); //HTMLElement
+        console.log(imageNode.src);
+        console.log(imageNode.alt);
+        console.log(imageNode.height);
+        console.log(imageNode.width);
+
+
+        const change=function(){
+            console.log("clicked")
+            imageNode.src="../WebBasic_Day2/media/background.jpeg"
+            imageNode.style.height="300px"
+        }
+
+        const button = document.getElementById('changeButton')
+        button.style.cssText = "border-radius: 12px ; background-color: green ;padding :5px"
+
+        button.setAttribute("class","mybtn")
+</script>
+</html>
