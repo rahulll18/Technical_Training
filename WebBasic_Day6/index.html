@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show</title>
+
+    <style>
+        #hidebtn {
+            padding: 10px 30px;
+        }
+        .image{
+            height: 300px;
+            width: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="hidebtn">HIDE</button>
+    <br>
+    <img src="../WebBasic_Day1/download.jpeg" alt="waterfall" class="image" id="image1">
+    <img src="../WebBasic_Day1/download.jpeg" alt="waterfall" class="image" id="image2">
+    <img src="../WebBasic_Day1/download.jpeg" alt="waterfall" class="image" id="image3">
+    <br>
+    <b>above will get hidden</b>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $("#hidebtn").click(() => $("#image1").hide(2000, () => {
+                    $("#image2").hide(2000, () => {
+                        $("#image3").hide(2000);
+                    })
+                }));
+            }
+
+            // function () {
+            //     $("#hidebtn").click(() => $("#image1").toggle());
+            // }
+
+            // $("#hidebtn").click(function () {
+            //     if ($("#hidebtn").text() === "HIDE") {
+            //         $("#image").hide(2000, () => {
+            //             $("#hidebtn").text("SHOW");
+            //         });
+            //     } else {
+            //         $("#image").show(2000, () => {
+            //             $("#hidebtn").text("HIDE");
+            //         });
+            //     }
+            // })
+        )
+    </script>
+</body>
+
+</html>

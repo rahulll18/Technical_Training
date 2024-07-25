@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selector</title>
 </head>
+<style>
+
+</style>
 <body>
     <ol>
         <li id="li1">JAVA</li>
@@ -14,6 +17,15 @@
         <li class="frontend">C++</li>
         <li class="frontend">JAVASCRIPT</li>
     </ol>
+
+    <h3 class="frontend">
+        hello
+    </h3>
+
+    <div id="block">
+
+    </div>
+    <input type="text" id="name">
     <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -21,7 +33,24 @@
     <script>
         console.log($("#li1"));
         console.log($("#li1").text());
-        console.log($("li.frontend"));
+        console.log($("li.frontend").text());
+        
+        //Extracting and putting content
+        const content = $("#li1").html();
+        $("#block").html(content);
+
+        $("#li1").css("color","red");
+
+        const styleObject = {
+            backgroundColor : "yellow",
+            color : "red"
+        }
+
+        $("#li2").css(styleObject);
+        $("h3.frontend").addClass("decoration")
+
+        $("#name").keyup(() => console.log($("#name").val()))
+
     </script>
 </body>
 </html>

@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .content{
+        column-count: 3;
+    }
+</style>
 <body>
+    <h2>Column Count</h2>
+    <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.
+    </div>
     <script>
         class Book {
         bookId ; bookName  ; bookPrice
@@ -16,7 +25,43 @@
         this.bookPrice = price;
     }
 }
-    let Book1 = new Book(1, "Java", 200);
+    let books = [
+        new Book(1, "Java Tech", 560),
+        new Book(3, "Java Easy Way", 460),
+        new Book(2, "Learn Python", 700.45),
+        new Book(4, "Basics of Web", 340),
+        new Book(7, "Unit Testing Learning", 300)
+    ];
+
+    books.forEach(book => {
+        console.log(book);
+    });
+
+    let filterJavaBooks = books.filter(book => book.bookName.toLowerCase().includes("java"))
+    console.log(filterJavaBooks)
+
+    let bookId_4 =  books.filter(book => book.bookId == 4)
+    console.log(bookId_4)
+
+    let newPrice = books.map(book => book.bookPrice + 100);
+    console.log(newPrice)
+
+    let totalSum = books.reduce((sum, book) => sum + book.bookPrice, 0);
+    console.log(totalSum)
+
+    let container = document.createElement("div");
+    container.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quos quod, illo, voluptas possimus id atque eos, impedit omnis qui eligendi saepe voluptates suscipit dicta eaque. Debitis quo quia dolore.Lorem ipsum dolor "
+    console.log(container)
+
+    let p = document.createElement("p");
+    p.innerText = "Web Basic training session"
+    container.appendChild(p);
+    let span = document.createElement("span");
+
+    p.after(span);
+    span.innerText = "Javascript dom"
+
+    document.body.prepend(container)
     </script>
 </body>
 </html>
