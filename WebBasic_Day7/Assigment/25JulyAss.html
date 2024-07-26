@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p class="subject">Java</p>
+    <p class="subject" id="js">JavaScript</p>
+    <h2>Hello World!</h2>
+    Name : <input type="text">
+    <br><br>
+    <div class="parent">
+        <div id="child1">Child1</div>
+        <div id="child2">
+            Child2
+            <p>Inner Child</p>
+        </div>
+    </div>
+    <h1>Hello Span</h1>
+    <h1>Hi Computech</h1>
+    <br>
+    <button>Button</button><br>
+    <a href="#">Click</a>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        console.log($('.subject').text());//class Selector
+        console.log($('#js').text());//id selector
+        console.log($("h2").text());//tag selector
+        console.log($("input[type]"));//attribute selector
+        console.log($(".parent >div").text());//parent child combinator
+        console.log($(".parent + h1").text());//adjacent Sibling Combinator
+        console.log($(".parent ~ h1").text());//general sibling combinator
+        //psuedo class selector
+        $('button').hover(
+            function() { // mouseenter
+                $(this).css('background-color', 'black');
+                $(this).css('color', 'white'); // Change text color to white for better contrast
+            },
+            function() { // mouseleave
+                $(this).css('background-color', '');
+                $(this).css('color', ''); // Reset text color
+            }
+
+        );
+    </script>
+</body>
+</html>

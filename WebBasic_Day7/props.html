@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <form id="loginForm">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <input type="checkbox" id="showPassword" /> Show Password
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#showPassword").on("change", function () {
+          var passwordField = $("#password");
+          var passwordFieldType = passwordField.attr("type");
+          if ($(this).is(":checked")) {
+            passwordField.attr("type", "text");
+          } else {
+            passwordField.attr("type", "password");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

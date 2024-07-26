@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="emailid">Email : </label>
+            <input type="email" oninput="validateEmail(this)" id="emailid" required>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div id="childValueRemove">
+        <p>Hello World!</p>
+        <p>Namaste JavaScript</p>
+    </div>
+    <button onclick="removeChild1()">Remove Child</button>
+    <br>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus possimus sed ad cumque adipisci rem similique! Aliquam aperiam veritatis at doloribus dolorum error doloremque? Perferendis voluptatibus nulla nihil corporis doloribus.</p>
+    <br>
+    <button onclick = "removeEleFromDom()">Remove From Dom</button>
+    <script>
+        function validateEmail(input){
+            const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(regexEmail.test(input.value)){
+                console.log("Email Validated");
+            } else {
+                console.log("Invalid Email");
+            }
+        }
+        function removeChild1(){
+            const parentNode = document.getElementById("childValueRemove");
+            parentNode.removeChild(parentNode.firstChild);
+        }   
+        function removeEleFromDom(){
+            document.getElementById("para").remove();
+        }
+    </script>
+</body>
+</html>

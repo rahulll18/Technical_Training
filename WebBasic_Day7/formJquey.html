@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .password {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="password">
+        <label for="pass">Password: </label>
+        <input type="password" id="pass">
+    </div>
+    <div class="password">
+        <label for="cpass">Confirm Password: </label>
+        <input type="password" id="cpass">
+    </div>
+    <p id="error">Passwords do not match</p>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#cpass').on('input', () => {
+                if ($('#pass').val() !== $('#cpass').val()) {
+                    $('#error').css('display', 'block');
+                } else {
+                    $('#error').css('display', 'none');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
